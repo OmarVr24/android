@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/home_fragment">
 
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.edu.uthermosillo.apps.valenciarochin.android.Home_fragment"
+        android:label="fragment_home_fragment"
+        tools:layout="@layout/fragment_home_fragment" >
+        <action
+            android:id="@+id/action_home_fragment_to_extra"
+            app:destination="@id/extra" />
+        <action
+            android:id="@+id/action_home_fragment_to_module"
+            app:destination="@id/module" />
+    </fragment>
+    <fragment
+        android:id="@+id/module"
+        android:name="com.edu.uthermosillo.apps.valenciarochin.android.module"
+        android:label="fragment_module"
+        tools:layout="@layout/fragment_module" />
+    <fragment
+        android:id="@+id/extra"
+        android:name="com.edu.uthermosillo.apps.valenciarochin.android.extra"
+        android:label="fragment_extra"
+        tools:layout="@layout/fragment_extra" />
 </navigation>
